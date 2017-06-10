@@ -3,6 +3,7 @@
         <calendar
                 :first-day="1"
                 :all-events="events"
+                @eventAdded="eventAdded"
         ></calendar>
     </div>
 </template>
@@ -18,6 +19,11 @@
         },
         components: {
             Calendar
+        },
+        methods: {
+            eventAdded(eventData) {
+                this.events.push(eventData);
+            },
         },
         mounted() {
             let me = this;

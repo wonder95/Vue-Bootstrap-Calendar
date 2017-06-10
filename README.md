@@ -17,7 +17,7 @@ You can install via npm
     $ npm install -S vue-bootstrap-calendar
 
 
-* Please note, this package depends on [vue-i18n](https://github.com/kazupon/vue-i18n) to run the translation engine, and it will break with out it! I am trying to figure out a way to not break the package when i18n is not defined! Feel free to advise me...
+* Please note, this package depends on [vue-i18n](https://github.com/kazupon/vue-i18n) to run the translation engine. If it's not installed the package will default to English.
 
 Then you can import ``Calendar`` from the package like so:
 ```javascript

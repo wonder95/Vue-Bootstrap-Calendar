@@ -5,7 +5,8 @@
         <div class="row">
             <div class="col-sm-6">
                 <div v-show="isDaySelected">
-                    <span class="label label-success" @click="showAddEventForm"> {{ $t('generic.add_event') }}</span>
+                    <span class="label label-success" @click="showAddEventForm" v-if="$i18n"> {{ $t('generic.add_event') }}</span>
+                    <span class="label label-success" @click="showAddEventForm" v-else>Add Event</span>
                 </div>
             </div>
             <div class="col-sm-6">

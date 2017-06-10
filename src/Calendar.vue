@@ -1,11 +1,15 @@
 <template>
     <div class="row">
-        <div v-if="loading">{{ $t('generic.loading')}}...</div>
+        <div v-if="loading && $i18n">{{ $t('generic.loading')}}...</div>
+        <div v-else-if="loading">Loading ...</div>
 
         <div v-if="error" class="error"></div>
 
         <div class="panel panel-default">
-            <div class="panel-heading"><h2>{{$t('generic.calender')}}</h2></div>
+            <div class="panel-heading">
+                <h2 v-if="$i18n">{{$t('generic.calender')}}</h2>
+                <h2 v-else>Calendar</h2>
+            </div>
 
             <div class="panel-body">
                 <div class="row">
@@ -60,7 +64,7 @@
                     return res >= 0 && res <= 6
                 },
                 default: 0
-            }
+            },
         },
         components: {
             'CalendarHeader': require('./Components/Header.vue'),
@@ -107,7 +111,10 @@
                 return weeks;
             },
             appLocale : function () {
-                return i18n.locale;
+                if(typeof i18n != 'undefined')
+                    return i18n.locale;
+
+                return 'en';
             },
             events: function () {
                 return this.allEvents;

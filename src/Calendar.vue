@@ -187,7 +187,7 @@
     }
 
 </script>
-<style>
+<style scoped>
     ul, p {
         margin: 0;
         padding: 0;

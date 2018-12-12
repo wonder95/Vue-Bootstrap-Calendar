@@ -3,7 +3,7 @@ export default {
 		'loading': "Loading",
 		'previous': "Previous",
 		'next': "Next",
-		'calender': "Calender",
+		'calendar': "Calendar",
 		'today': "Today",
 		'week': "Week",
 		'add_event': "Add Event",

@@ -7,7 +7,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h2 v-if="$i18n">{{$t('generic.calender')}}</h2>
+                    <h2 v-if="$i18n">{{$t('generic.calendar')}}</h2>
                     <h2 v-else>Calendar</h2>
                 </div>
 

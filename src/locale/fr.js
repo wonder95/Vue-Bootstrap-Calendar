@@ -3,7 +3,7 @@ export default {
 		'loading': "Téléchargement",
 		'previous': "Précédent",
 		'next': "Suivant",
-		'calender': "Calendrier",
+		'calendar': "Calendrier",
 		'today': "Aujourd’hui",
 		'week': "Semaine",
 		'add_event': "Ajouter l’événement",
